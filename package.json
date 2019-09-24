@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/AdstonOliveira/SOOS#readme",
   "dependencies": {
+    "debug": "^4.1.1",
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.2"
   }
 }
