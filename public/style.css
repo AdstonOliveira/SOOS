@@ -11,10 +11,12 @@ body{
     background-color: #222222;
 }
 .home_img{
-    width: 100%; min-height: 50vh;
-
+    width: 100%; min-height: 95vh;
     display: flex; justify-content: center;
     background-image: url("/imgs/fundo_topo.jpg");
     background-repeat: no-repeat; background-size: cover;
-
+}
+.home_img > h3{
+    color: white;
+    text-shadow: 1%;
 }
