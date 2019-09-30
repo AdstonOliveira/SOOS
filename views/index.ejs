@@ -3,18 +3,22 @@
 <%- include('./includes/head.ejs') %>
 <body>
 <%- include('./includes/menu.ejs') %>
-<section class="flex h-100">
-<div class="home_img">
-    <div class="row justify-content-center align-items-center text-light" style="width: 50%; border: 1px solid black;">
-        <h3>Sistema Online de Ordem de Serviço</h3>
-    </div>
-</div>
-</section>
-<%- include('./includes/scripts.ejs') %>
+<section class="d-flex flex-column h-100 align-items-center text-center">
+            <div class="mt-5 row border">
+                <h3 class="p-5 shadow-sm">Sistema Online de Ordem de Serviço</h3>
+            </div>
+            <div class="pt-5 row col-8 justify-content-between">
+                <div class="border col-3">aaftafta</div>
+                <div class="border col-3">ajiajaj</div>
+                <div class="border col-3">akoakaok</div>
+            </div>
+ </section>
+    <%- include('./includes/scripts.ejs') %>
 </body>
 <script>
-    $(document).ready(function(){
-        $("#menu_home").attr("class","active");
+    $(document).ready(function () {
+        $("#menu_home").attr("class", "active");
     });
-</script>   
+</script>
+
 </html>
