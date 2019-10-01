@@ -1,17 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <%- include('../includes/head.ejs') %>
+
 <body>
     <%- include('../includes/menu.ejs') %>
-    <article class="container">
-        <h1>Teste</h1>
-    </article>
 
-<%- include('../includes/scripts.ejs') %>
+    <div class="container border pt-5">
+        <div class="row border justify-content-center">
+            <h3> Bem Vindo Cliente...</h3>
+        </div>
+
+        <div class="row col-12">
+            <div class="row col-5 flex-column border">
+                <div class="row justify-content-center pt-5">
+                    <h4 style="color: white">Abrir OS</h4>
+                </div>
+                <div class="row justify-content-center pt-3">
+                    <h4 style="color: white">Consultar OS</h4>
+                </div>
+                <div class="row col-12 border justify-content-center pt-3">
+                    <h4 style="color: white">Verificar Orçamento</h4>
+                </div>
+                <div class="row justify-content-center pt-3">
+                    <h4 style="color: white">mensagem ao Tecnico</h4>
+                </div>
+            </div>
+            <div class="row col-5">
+                <h3>Card 2</h3>
+            </div>
+
+        </div>
+    </div>
+
+
+    <%- include('../includes/scripts.ejs') %>
 </body>
 <script>
         // $(document).ready(function(){
         //     $("#menu_home").attr("class","active");
         // });
-</script>   
+</script>
+
 </html>
