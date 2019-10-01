@@ -13,4 +13,11 @@ exports.getLogin = (req, res, next) =>{
   });
   };
 
+exports.getNovo = (req, res, next) =>{
+  res.render('cliente/novo', {
+    titulo: 'Novo Cliente',
+    formAction: '/cliente/novo',
+  });
+};
+
  
