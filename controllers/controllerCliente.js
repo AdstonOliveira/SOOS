@@ -13,8 +13,4 @@ exports.getLogin = (req, res, next) =>{
   });
   };
 
-  exports.getLoginColaborador = (req, res, next) =>{
-    res.render('colaborador/login', {
-      titulo: 'Colaborador Login',
-    });
-  };
+ 
