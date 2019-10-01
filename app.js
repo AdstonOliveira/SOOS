@@ -17,7 +17,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 
 app.use('/cliente', clienteRouter);
-
 app.use('/colaborador', colaboradorRouter);
 
 app.get('/', (req, res, next) => {
