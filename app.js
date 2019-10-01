@@ -3,6 +3,8 @@ const morgan = require('morgan');
 const bodyParser = require('body-parser');
 
 const clienteRouter = require('./routes/clienteRouter');
+
+const colaboradorRouter = require('./routes/colaboradorRouter');
 const app = express();
 
 app.set('view engine', 'ejs');
@@ -15,6 +17,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 
 app.use('/cliente', clienteRouter);
+
+app.use('/colaborador', colaboradorRouter);
 
 app.get('/', (req, res, next) => {
     res.render('index', {
