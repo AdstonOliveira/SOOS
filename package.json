@@ -17,11 +17,16 @@
   },
   "homepage": "https://github.com/AdstonOliveira/SOOS#readme",
   "dependencies": {
+    "bcrypt": "^3.0.6",
     "body-parser": "^1.19.0",
     "debug": "^4.1.1",
     "ejs": "^2.7.1",
     "express": "^4.17.1",
-    "morgan": "^1.9.1"
+    "express-back": "0.0.2",
+    "knex": "^0.19.5",
+    "morgan": "^1.9.1",
+    "mysql": "^2.17.1",
+    "mysql2": "^1.7.0"
   },
   "devDependencies": {
     "nodemon": "^1.19.2"
