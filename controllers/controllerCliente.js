@@ -30,12 +30,19 @@ exports.postNovo = (req, res, next) => {
   const bcrypt = require('bcrypt');
   const salt = bcrypt.genSaltSync(10);
 
-  query = "insert into cliente (nome, email,senha) values ('"+req.body.nome
-    +"','"+req.body.email+"','"+bcrypt.hashSync(req.body.senha,salt)+"')";
+  dados={ 
+    nome: req.body.nome,
+    email: req.body.email,
+    senha: bcrypt.hashSync(req.body.senha,salt)
+  }
 
-    sql.connect();
+  knex("cliente").insert(dados).then( (dados)=>{
+    res.redirect("/cliente/login");
+  }).catch(err=>{
+    res.redirect("/cliente/novo");
+  })
 
-  sql.execSQLQuery(query, res);
+  
   
 }
 

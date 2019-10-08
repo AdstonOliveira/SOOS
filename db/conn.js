@@ -19,7 +19,7 @@ exports.connect = () =>{
 
 exports.execSQLQuery = (sqlQry, res) => {
 
-    return conn.query(sqlQry, function (err,results, fields) {
+    conn.query(sqlQry, function (err,results, fields) {
         if(err){ 
             console.log("erro") ;
             res.redirect("/cliente/novo");
@@ -28,7 +28,7 @@ exports.execSQLQuery = (sqlQry, res) => {
 
         console.log("sucesso")
         conn.end();
-        res.redirect("/cliente/login");
+        res.json(results);
         return true;
     });
 

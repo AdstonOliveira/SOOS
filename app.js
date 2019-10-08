@@ -1,10 +1,16 @@
 const express = require('express');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
+const app = express();
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 const clienteRouter = require('./routes/clienteRouter');
 const colaboradorRouter = require('./routes/colaboradorRouter');
-const app = express();
+const OSRouter = require('./routes/OSRouter');
+const equipRouter = require('./routes/equipRouter');
+
+
 
 app.set('view engine', 'ejs');
 app.set('views', 'views');
@@ -12,11 +18,12 @@ app.set('views', 'views');
 app.use( express.static(__dirname + '/public') );
 
 app.use(morgan('dev'));
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+
 
 app.use('/cliente', clienteRouter);
 app.use('/colaborador', colaboradorRouter);
+app.use('/OS', OSRouter);
+app.use('/equip', equipRouter);
 
 app.get('/', (req, res, next) => {
     res.render('index', {
