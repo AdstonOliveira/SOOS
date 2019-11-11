@@ -9,3 +9,7 @@ const knex = require('../db/knex.js');
 exports.getNovo = (req, res, next) =>{
     res.render("os/index");
 }
+
+exports.getNovaOS = (req,res,next) => {
+    res.render("os/novaOS");
+}
