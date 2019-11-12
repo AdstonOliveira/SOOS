@@ -22,7 +22,7 @@ app.use(morgan('dev'));
 
 app.use('/cliente', clienteRouter);
 app.use('/colaborador', colaboradorRouter);
-app.use('/OS', OSRouter);
+app.use('/os', OSRouter);
 app.use('/equip', equipRouter);
 
 app.get('/', (req, res, next) => {

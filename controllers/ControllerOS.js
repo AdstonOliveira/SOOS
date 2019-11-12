@@ -6,7 +6,7 @@ const knex = require('../db/knex.js');
 
 // }
 
-exports.getNovo = (req, res, next) =>{
+exports.getIndex = (req, res, next) =>{
     res.render("os/index");
 }
 
