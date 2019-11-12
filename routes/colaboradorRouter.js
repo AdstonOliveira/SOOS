@@ -5,4 +5,6 @@ const colaboradorController = require('../controllers/ControllerColaborador');
 
 router.get('/login', colaboradorController.getLogin);
 
+router.get('/index', colaboradorController.getIndex);
+
 module.exports = router;
