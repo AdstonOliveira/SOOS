@@ -7,6 +7,11 @@
         <div class="row pt-5 col-12 justify-content-center">
             <div class="col-4">
             <div class="card">
+                    <% if (typeof message !== 'undefined') {  %>
+                        <p>
+                          <label style="color:Red"><%= message %></label>
+                        </p>
+                      <%}%>
                 <h3 class=" d-flex justify-content-center card-header bg-dark" style="color: white">Login</h3>
                 <div class="card-body">
 
@@ -21,7 +26,7 @@
                             <input type="submit" id="enviar" value="Entrar" class="col-12 btn btn-primary" />
                         </div>
                     </form>
-                    
+
                     <div class="d-flex justify-content-between">
                         <a href="/cliente/novo" class="card-link">Novo por aqui?</a>
                         <a href="" class="card-link">Esqueceu a senha?</a>

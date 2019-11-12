@@ -25,6 +25,7 @@ app.use('/colaborador', colaboradorRouter);
 app.use('/os', OSRouter);
 app.use('/equip', equipRouter);
 
+
 app.get('/', (req, res, next) => {
     res.render('index', {
       titulo: 'SOOS - Sistema Online Ordem Serviço'

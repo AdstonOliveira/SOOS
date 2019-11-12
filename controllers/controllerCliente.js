@@ -41,7 +41,7 @@ exports.postNovo = (req, res, next) => {
   }
 
   knex("cliente").insert(dados).then( (dados)=>{
-    res.redirect("/cliente/login");
+    res.redirect("back");
   }).catch(err=>{
     res.redirect("/cliente/novo");
   })
@@ -49,11 +49,8 @@ exports.postNovo = (req, res, next) => {
 };
 
 exports.postLogin = (req, res, next) => {
-  // console.log(req.body);
   var usr_email = req.body.email;
   let senha = req.body.senha;
-
-  console.log("Salt: " + salt);
 
   var pwd = knex('cliente').where({ email: usr_email }).first();
 
@@ -61,10 +58,11 @@ exports.postLogin = (req, res, next) => {
         let salto = result.salt;
         let usr_senha = bcrypt.hashSync(senha, salto);  
 
-        if(result.senha === usr_senha){
-          res.send('/os/index', { result });
+        if( result.senha === usr_senha ){
+           res.redirect('/os/index/');
+
         }else{
-          res.status(404).redirect('/cliente/login');
+          res.redirect(404,'back');
         }
     }).catch(err=>{
       res.status(500).json({});
