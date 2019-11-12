@@ -9,5 +9,6 @@ router.get('/novo', clienteController.getNovo);
 router.get('/testeapi', clienteController.testeAPI);
 
 router.post('/novo', clienteController.postNovo);
+router.post('/login', clienteController.postLogin);
 
 module.exports = router;
