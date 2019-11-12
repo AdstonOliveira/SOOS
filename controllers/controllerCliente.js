@@ -35,6 +35,7 @@ exports.postNovo = (req, res, next) => {
     email: req.body.email,
     senha: bcrypt.hashSync(req.body.senha,salt)
   }
+  console.log("Senha digitada: " + dados.senha);
 
   knex("cliente").insert(dados).then( (dados)=>{
     res.redirect("/cliente/login");
@@ -42,8 +43,40 @@ exports.postNovo = (req, res, next) => {
     res.redirect("/cliente/novo");
   })
 
+}
+
+exports.postLogin = (req, res, next) => {
+  const bcrypt = require('bcrypt');
+  const salt = bcrypt.genSaltSync(10);
+
+  // console.log(req.body);
+
+  var usr_email = req.body.email;
+  let senha = req.body.senha;
   
+  var usr_senha = bcrypt.hashSync(senha, salt);
+
+  console.log("Senha digitada: " + usr_senha);
+
+  var pwd = knex('cliente').where({ email: usr_email }).first() ;
+      pwd.then( function(result){
+      // console.log(result.email);
+      if(result.senha == usr_senha){
+        console.log(result.senha + "aca " + usr_senha)
+        res.send('/cliente/index');
+      }else{
+        console.log(result.senha + "aca " + usr_senha)
+        res.redirect('/cliente/login');
+      }
+
+  }).catch(err=>{
+    res.status(400).json({});
+  })
+
   
+
+
+
 }
 
  

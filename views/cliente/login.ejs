@@ -9,17 +9,19 @@
             <div class="card">
                 <h3 class=" d-flex justify-content-center card-header bg-dark" style="color: white">Login</h3>
                 <div class="card-body">
-                    <form action="" method="POST" id="form">
+
+                    <form action="/cliente/login" method="POST" id="form">
                         <div class="form-group">
-                            <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Usuario" />
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Email cadastrado" />
                         </div>
                         <div class="form-group">
                             <input type="password" name="senha" id="senha" class="form-control" placeholder="Password">
                         </div>
                         <div class="form-group pt-3">
-                            <input type="button" id="enviar" value="Entrar" class="col-12 btn btn-primary" />
+                            <input type="submit" id="enviar" value="Entrar" class="col-12 btn btn-primary" />
                         </div>
                     </form>
+                    
                     <div class="d-flex justify-content-between">
                         <a href="/cliente/novo" class="card-link">Novo por aqui?</a>
                         <a href="" class="card-link">Esqueceu a senha?</a>
