@@ -3,19 +3,46 @@
 <%- include('../includes/head.ejs') %>
 <body>
     <%- include('../includes/menu.ejs') %>
-    <section class="d-flex flex-column align-items-center text-center">
-    <div class="row col-12 justify-content-center align-items-center" style="min-height: 500px">
-            <h3> Bem Vindo Cliente...</h3>
-        <div class="flex row col-10 text-center " style="height: 400px">
+    <section class="d-flex h-100 justify-content-center align-items-center" style="min-height: 50vh" >
+        <div class="card col-md-5">
+            <div class="card-header text-center">Bem Vindo Colaborador</div>
 
-            <div class="col col-3 m-1 text-center ">
-            <h1>Todas as OS abertas</h1>
-            <table>
-                
-            </table>
+            <div class="card-body">
+                    <div class="row no-gutters">
+                        <div class="col-5">
+                            <input class="form-control form-control-lg " type="search" placeholder="Buscar">
+                        </div>
+                            
+                            <div class="col-auto">
+                                <button class="btn btn-lg btn-success" type="submit">Buscar</button>
+                            </div>
+                            
+                        </div>
+
+                <table class="table table-striped mt-5">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Número da OS</th>
+                            <th scope="col">Data de Abertura</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Nome do Cliente</th>
+                            <th class="text-center" colspan="2">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>11/11/2019</td>
+                            <td>Aberto</td>
+                            <td>Adalton Silva Sauro</td>
+                            <td><a  class="btn btn-info btn-sm" >Fechar</a></td>
+                            <td><a  class="btn btn-info btn-sm" >Orçamento</a></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
+        </div>
 
-    </div>
 </section>
 
 

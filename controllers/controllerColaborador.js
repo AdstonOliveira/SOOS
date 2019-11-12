@@ -3,3 +3,8 @@ exports.getLogin = (req, res, next) =>{
       titulo: 'Colaborador Login',
     });
   };
+
+  exports.getIndex = (req, res, next) =>{
+    res.render('colaborador/index', {
+    });
+  };
