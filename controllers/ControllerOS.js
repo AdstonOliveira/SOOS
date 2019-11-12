@@ -13,3 +13,5 @@ exports.getNovo = (req, res, next) =>{
 exports.getNovaOS = (req,res,next) => {
     res.render("os/novaOS");
 }
+
+
