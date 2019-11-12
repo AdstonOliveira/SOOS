@@ -21,7 +21,8 @@ CREATE TABLE IF NOT EXISTS `soos`.`Cliente` (
   `id_cliente` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,
   `email` VARCHAR(45) NOT NULL,
-  senha varchar(512),
+  `senha` varchar(512),
+  `salt` varchar(50),
   PRIMARY KEY (`id_cliente`))
 ENGINE = InnoDB;
 
