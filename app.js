@@ -23,7 +23,7 @@ app.use(morgan('dev'));
 app.use('/cliente', clienteRouter);
 app.use('/colaborador', colaboradorRouter);
 app.use('/os', OSRouter);
-app.use('/equip', equipRouter);
+app.use('/equipamento', equipRouter);
 
 
 app.get('/', (req, res, next) => {
@@ -33,7 +33,10 @@ app.get('/', (req, res, next) => {
 });
 
 app.use((req, res, next) => {
-    res.sendStatus(404);
-  });
+  var err = new Error('Not Found');
+  res.render('erro');
+});
+
+
   
   app.listen(3000);
